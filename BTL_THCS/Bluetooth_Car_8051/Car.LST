@@ -1,0 +1,65 @@
+C51 COMPILER V9.01   CAR                                                                   06/07/2018 19:37:55 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE CAR
+OBJECT MODULE PLACED IN Car.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE Car.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /*Cac Ham Dieu Khien Dong Co*/
+   2          #include"Car.h"
+   3          /*cac ham dieu khien*/
+   4          void batdent(){
+   5   1              dent=0;
+   6   1      }
+   7          void tatdent(){
+   8   1              dent=1;
+   9   1      }
+  10          void batdens(){
+  11   1              dens1 = dens2 = 0;
+  12   1      }
+  13          void tatdens(){
+  14   1              dens1 = dens2 = 1;
+  15   1      }
+  16          void dung(){
+  17   1         bxt1=bxt2=bxp1=bxp2=0;
+  18   1      }
+  19          void trai(){
+  20   1              bxt1 = bxt2 = 0;
+  21   1              bxp1 = 1;
+  22   1              bxp2 = 0;
+  23   1      }
+  24          void phai(){
+  25   1              bxp1 = bxp2 = 0;
+  26   1              bxt1 = 1;
+  27   1              bxt2 = 0;
+  28   1      }
+  29          void tien(){
+  30   1              bxt1 = bxp1 = 1;
+  31   1              bxt2 = bxp2 = 0;
+  32   1      }
+  33          void lui(){
+  34   1              bxt1 = bxp1 = 0;
+  35   1              bxt2 = bxp2 = 1;
+  36   1      }
+  37          void batloa(){
+  38   1         loa = 1;
+  39   1      }
+  40          void tatloa(){
+  41   1         loa = 0;
+  42   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     67    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
