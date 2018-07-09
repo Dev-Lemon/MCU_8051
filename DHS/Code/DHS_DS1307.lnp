@@ -1,4 +1,0 @@
-"main.obj",
-"I2C.obj" 
-TO "DHS_DS1307" 
-RAMSIZE(256) 
