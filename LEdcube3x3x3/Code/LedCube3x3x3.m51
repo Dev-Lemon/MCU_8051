@@ -1,0 +1,391 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/18/2018  16:08:38  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE .\output\main.obj, .\output\delay.obj TO .\output\LedCube3x3x3 PRINT (.\LedCube3x3x3.m51) RAMSI
+>> ZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\output\main.obj (MAIN)
+  .\output\delay.obj (DELAY)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?IMUL)
+
+
+LINK MAP OF MODULE:  .\output\LedCube3x3x3 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?_SANGTUNGCOT?MAIN
+            DATA    000AH     0002H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     00E5H     UNIT         ?PR?_QUAYTRON?MAIN
+            CODE    00E8H     00D7H     UNIT         ?PR?_KDH?MAIN
+            CODE    01BFH     00C0H     UNIT         ?PR?_BUNGGIUARA?MAIN
+            CODE    027FH     006EH     UNIT         ?PR?_SANGTUNGCOT1?MAIN
+            CODE    02EDH     006BH     UNIT         ?PR?_SANGTUNGCOT?MAIN
+            CODE    0358H     0034H     UNIT         ?PR?_SANGDUOILEN?MAIN
+            CODE    038CH     0034H     UNIT         ?PR?_SANGTRENXUONG?MAIN
+            CODE    03C0H     002BH     UNIT         ?PR?_BLINK?MAIN
+            CODE    03EBH     0028H     UNIT         ?PR?MAIN?MAIN
+            CODE    0413H     0023H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    0436H     0012H     UNIT         ?C?LIB_CODE
+            CODE    0448H     000EH     UNIT         ?PR?_DELAY?DELAY
+            CODE    0456H     000EH     UNIT         ?PR?_DELAY_S?DELAY
+            CODE    0464H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0470H     000AH     UNIT         ?PR?INIT?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\output\LedCube3x3x3 (MAIN)
+
+
+SEGMENT                           DATA_GROUP 
+  +--> CALLED SEGMENT           START    LENGTH
+-----------------------------------------------
+?C_C51STARTUP                   -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                   -----    -----
+  +--> ?PR?INIT?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/18/2018  16:08:38  PAGE 2
+
+
+  +--> ?PR?_BLINK?MAIN
+  +--> ?PR?_SANGDUOILEN?MAIN
+  +--> ?PR?_SANGTRENXUONG?MAIN
+  +--> ?PR?_SANGTUNGCOT1?MAIN
+  +--> ?PR?_KDH?MAIN
+  +--> ?PR?_QUAYTRON?MAIN
+  +--> ?PR?_BUNGGIUARA?MAIN
+
+?PR?_BLINK?MAIN                 000AH    0002H
+  +--> ?PR?_DELAY_MS?DELAY
+
+?PR?_SANGDUOILEN?MAIN           000AH    0002H
+  +--> ?PR?_DELAY_MS?DELAY
+
+?PR?_SANGTRENXUONG?MAIN         000AH    0002H
+  +--> ?PR?_DELAY_MS?DELAY
+
+?PR?_SANGTUNGCOT1?MAIN          000AH    0002H
+  +--> ?PR?_DELAY_MS?DELAY
+
+?PR?_KDH?MAIN                   000AH    0002H
+  +--> ?PR?_DELAY_MS?DELAY
+
+?PR?_QUAYTRON?MAIN              000AH    0002H
+  +--> ?PR?_DELAY_MS?DELAY
+
+?PR?_BUNGGIUARA?MAIN            000AH    0002H
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  .\output\LedCube3x3x3 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:0003H         PUBLIC        _quaytron
+  B:0080H.0       PUBLIC        P0_0
+  B:0080H.1       PUBLIC        P0_1
+  B:0080H.2       PUBLIC        P0_2
+  C:03C0H         PUBLIC        _blink
+  B:0080H.3       PUBLIC        P0_3
+  B:0080H.4       PUBLIC        P0_4
+  B:0080H.5       PUBLIC        P0_5
+  B:0090H.5       PUBLIC        P1_5
+  B:0080H.6       PUBLIC        P0_6
+  B:0090H.6       PUBLIC        P1_6
+  B:0080H.7       PUBLIC        P0_7
+  B:0090H.7       PUBLIC        P1_7
+  B:00A0H.7       PUBLIC        P2_7
+  C:038CH         PUBLIC        _sangtrenxuong
+  C:0358H         PUBLIC        _sangduoilen
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/18/2018  16:08:38  PAGE 3
+
+
+  C:03EBH         PUBLIC        main
+  C:01BFH         PUBLIC        _bunggiuara
+  C:02EDH         PUBLIC        _sangtungcot
+  C:0470H         PUBLIC        init
+  C:00E8H         PUBLIC        _kdh
+  C:027FH         PUBLIC        _sangtungcot1
+  -------         PROC          MAIN
+  C:03EBH         LINE#         16
+  C:03EBH         LINE#         17
+  C:03EEH         LINE#         18
+  C:03EEH         LINE#         19
+  C:03F3H         LINE#         20
+  C:03F8H         LINE#         21
+  C:03FDH         LINE#         22
+  C:0402H         LINE#         23
+  C:0407H         LINE#         24
+  C:040CH         LINE#         25
+  C:0411H         LINE#         26
+  -------         ENDPROC       MAIN
+  -------         PROC          _BUNGGIUARA
+  D:000AH         SYMBOL        lan
+  -------         DO            
+  D:000BH         SYMBOL        i
+  -------         ENDDO         
+  C:01BFH         LINE#         29
+  C:01C1H         LINE#         31
+  C:01CEH         LINE#         32
+  C:01D7H         LINE#         33
+  C:01DEH         LINE#         34
+  C:01E9H         LINE#         35
+  C:01FCH         LINE#         36
+  C:020FH         LINE#         37
+  C:0222H         LINE#         38
+  C:0235H         LINE#         39
+  C:0246H         LINE#         40
+  C:0257H         LINE#         41
+  C:0268H         LINE#         42
+  C:0279H         LINE#         43
+  C:027EH         LINE#         44
+  -------         ENDPROC       _BUNGGIUARA
+  -------         PROC          _QUAYTRON
+  D:000AH         SYMBOL        lan
+  -------         DO            
+  D:000BH         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         45
+  C:0005H         LINE#         47
+  C:0012H         LINE#         48
+  C:0015H         LINE#         49
+  C:0022H         LINE#         50
+  C:0024H         LINE#         51
+  C:002DH         LINE#         52
+  C:0038H         LINE#         53
+  C:0043H         LINE#         54
+  C:004EH         LINE#         55
+  C:0059H         LINE#         56
+  C:0064H         LINE#         57
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/18/2018  16:08:38  PAGE 4
+
+
+  C:006FH         LINE#         58
+  C:007AH         LINE#         60
+  C:0087H         LINE#         61
+  C:0089H         LINE#         62
+  C:0092H         LINE#         63
+  C:009DH         LINE#         64
+  C:00A8H         LINE#         65
+  C:00B3H         LINE#         66
+  C:00BEH         LINE#         67
+  C:00C9H         LINE#         68
+  C:00D4H         LINE#         69
+  C:00DFH         LINE#         70
+  C:00E4H         LINE#         71
+  C:00E7H         LINE#         72
+  -------         ENDPROC       _QUAYTRON
+  -------         PROC          _KDH
+  D:000AH         SYMBOL        lan
+  -------         DO            
+  D:000BH         SYMBOL        i
+  -------         ENDDO         
+  C:00E8H         LINE#         73
+  C:00EAH         LINE#         75
+  C:00F7H         LINE#         76
+  C:00FAH         LINE#         77
+  C:0107H         LINE#         78
+  C:0110H         LINE#         79
+  C:0119H         LINE#         80
+  C:0122H         LINE#         81
+  C:012BH         LINE#         82
+  C:0134H         LINE#         83
+  C:013DH         LINE#         84
+  C:0146H         LINE#         85
+  C:014FH         LINE#         86
+  C:0158H         LINE#         88
+  C:0165H         LINE#         89
+  C:016EH         LINE#         90
+  C:0177H         LINE#         91
+  C:0180H         LINE#         92
+  C:0189H         LINE#         93
+  C:0192H         LINE#         94
+  C:019BH         LINE#         95
+  C:01A4H         LINE#         96
+  C:01ADH         LINE#         97
+  C:01B6H         LINE#         98
+  C:01BBH         LINE#         99
+  C:01BEH         LINE#         100
+  -------         ENDPROC       _KDH
+  -------         PROC          _SANGTUNGCOT1
+  D:000AH         SYMBOL        lan
+  -------         DO            
+  D:000BH         SYMBOL        i
+  -------         ENDDO         
+  C:027FH         LINE#         101
+  C:0281H         LINE#         103
+  C:028BH         LINE#         104
+  C:028EH         LINE#         105
+  C:0294H         LINE#         106
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/18/2018  16:08:38  PAGE 5
+
+
+  C:029DH         LINE#         107
+  C:02A6H         LINE#         108
+  C:02AFH         LINE#         109
+  C:02B8H         LINE#         110
+  C:02C1H         LINE#         111
+  C:02CAH         LINE#         112
+  C:02D3H         LINE#         113
+  C:02DCH         LINE#         114
+  C:02E5H         LINE#         115
+  C:02E9H         LINE#         116
+  C:02ECH         LINE#         117
+  -------         ENDPROC       _SANGTUNGCOT1
+  -------         PROC          _SANGTUNGCOT
+  D:0008H         SYMBOL        lan
+  -------         DO            
+  D:0009H         SYMBOL        i
+  -------         ENDDO         
+  C:02EDH         LINE#         118
+  C:02EFH         LINE#         120
+  C:02F9H         LINE#         121
+  C:02FCH         LINE#         122
+  C:0302H         LINE#         123
+  C:030BH         LINE#         124
+  C:0314H         LINE#         125
+  C:031DH         LINE#         126
+  C:0326H         LINE#         127
+  C:032FH         LINE#         128
+  C:0338H         LINE#         129
+  C:0341H         LINE#         130
+  C:034AH         LINE#         131
+  C:0353H         LINE#         132
+  C:0357H         LINE#         133
+  -------         ENDPROC       _SANGTUNGCOT
+  -------         PROC          INIT
+  C:0470H         LINE#         134
+  C:0470H         LINE#         135
+  C:0479H         LINE#         136
+  -------         ENDPROC       INIT
+  -------         PROC          _SANGDUOILEN
+  D:000AH         SYMBOL        lan
+  -------         DO            
+  D:000BH         SYMBOL        i
+  -------         ENDDO         
+  C:0358H         LINE#         137
+  C:035AH         LINE#         139
+  C:0364H         LINE#         140
+  C:0369H         LINE#         141
+  C:036CH         LINE#         142
+  C:036EH         LINE#         143
+  C:0375H         LINE#         144
+  C:0377H         LINE#         145
+  C:037EH         LINE#         146
+  C:0380H         LINE#         147
+  C:0387H         LINE#         148
+  C:038BH         LINE#         149
+  -------         ENDPROC       _SANGDUOILEN
+  -------         PROC          _SANGTRENXUONG
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/18/2018  16:08:38  PAGE 6
+
+
+  D:000AH         SYMBOL        lan
+  -------         DO            
+  D:000BH         SYMBOL        i
+  -------         ENDDO         
+  C:038CH         LINE#         150
+  C:038EH         LINE#         152
+  C:0398H         LINE#         153
+  C:039DH         LINE#         154
+  C:03A0H         LINE#         155
+  C:03A2H         LINE#         156
+  C:03A9H         LINE#         157
+  C:03ABH         LINE#         158
+  C:03B2H         LINE#         159
+  C:03B4H         LINE#         160
+  C:03BBH         LINE#         161
+  C:03BFH         LINE#         162
+  -------         ENDPROC       _SANGTRENXUONG
+  -------         PROC          _BLINK
+  D:000AH         SYMBOL        lan
+  -------         DO            
+  D:000BH         SYMBOL        i
+  -------         ENDDO         
+  C:03C0H         LINE#         163
+  C:03C2H         LINE#         165
+  C:03C7H         LINE#         166
+  C:03D0H         LINE#         167
+  C:03D3H         LINE#         168
+  C:03D9H         LINE#         169
+  C:03DCH         LINE#         170
+  C:03E3H         LINE#         171
+  C:03E7H         LINE#         172
+  C:03EAH         LINE#         173
+  -------         ENDPROC       _BLINK
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0448H         PUBLIC        _delay
+  C:0413H         PUBLIC        _delay_ms
+  C:0456H         PUBLIC        _delay_s
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        t
+  C:0448H         LINE#         3
+  C:0448H         LINE#         4
+  C:0452H         LINE#         5
+  C:0455H         LINE#         6
+  -------         ENDPROC       _DELAY
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0413H         LINE#         8
+  C:0413H         LINE#         10
+  C:041DH         LINE#         11
+  C:042BH         LINE#         12
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/18/2018  16:08:38  PAGE 7
+
+
+  C:0432H         LINE#         13
+  C:0435H         LINE#         14
+  -------         ENDPROC       _DELAY_MS
+  -------         PROC          _DELAY_S
+  D:0006H         SYMBOL        t
+  C:0456H         LINE#         16
+  C:0456H         LINE#         17
+  C:0460H         LINE#         18
+  C:0463H         LINE#         19
+  -------         ENDPROC       _DELAY_S
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        ?C?IMUL
+  C:0436H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SANGTUNGCOT?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?DELAY
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_S?DELAY
+
+Program Size: data=13.0 xdata=0 code=1146
+LINK/LOCATE RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)

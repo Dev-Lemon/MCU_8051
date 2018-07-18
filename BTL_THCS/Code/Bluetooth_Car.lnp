@@ -1,0 +1,5 @@
+"main.obj",
+"UART.obj",
+"Car.obj" 
+TO "Bluetooth_Car" 
+RAMSIZE(256) 

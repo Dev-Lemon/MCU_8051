@@ -1,0 +1,208 @@
+C51 COMPILER V9.01   MAIN                                                                  07/17/2018 10:58:41 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\output\main.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE src\main.c BROWSE DEBUG OBJECTEXTEND PRINT(.\main.lst) OBJECT(.\output\main
+                    -.obj)
+
+line level    source
+
+   1          #include"..\inc\port.h"
+   2          #include"..\inc\delay.h"
+   3          /*khai bao dieu khien*/
+   4          #define sang 0
+   5          #define tat  1
+   6          int blink(unsigned char lan);
+   7          int sangduoilen(unsigned char lan);
+   8          int sangtrenxuong(unsigned char lan);
+   9          int sangtungcot(unsigned char lan);
+  10          int sangtungcot1(unsigned char lan);
+  11          int init();
+  12          int quaytron(unsigned char lan);
+  13          int kdh(unsigned char lan);
+  14          int bunggiuara(unsigned char lan);
+  15          
+  16          int main(){
+  17   1         init();      
+  18   1         while(1){
+  19   2              blink(5);
+  20   2              sangduoilen(5);
+  21   2              sangtrenxuong(5);
+  22   2              sangtungcot1(5);
+  23   2              kdh(5);
+  24   2              quaytron(5);
+  25   2              bunggiuara(5);
+  26   2         }
+  27   1      return 0;
+  28   1      }
+  29          int bunggiuara(unsigned char lan){
+  30   1               unsigned char i;
+  31   1               for(i=0;i<lan;i++){
+  32   2                      P0=P2=P1=0xFF;
+  33   2                      delay_ms(20);
+  34   2                      H1=C4=sang;delay_ms(350);
+  35   2                      H0=H2=C0=C2=C6=C8=sang;delay_ms(250);
+  36   2                      H0=H2=C0=C2=C6=C8=tat;delay_ms(250);
+  37   2                      H0=H2=C1=C3=C5=C7=sang;delay_ms(250);
+  38   2                      H0=H2=C1=C3=C5=C7=tat;delay_ms(250);
+  39   2                      H1=C0=C2=C6=C8=sang;delay_ms(250);
+  40   2                      H1=C0=C2=C6=C8=tat;delay_ms(250);
+  41   2                      H1=C1=C3=C5=C7=sang;delay_ms(250);
+  42   2                      H1=C1=C3=C5=C7=tat;delay_ms(250);
+  43   2               }
+  44   1      }
+  45          int quaytron(unsigned char lan){
+  46   1              unsigned char i;
+  47   1              for(i=0;i<lan;i++){
+  48   2                      P1=0x00;
+  49   2                      P0=P2=0xFF;delay_ms(350);
+  50   2                      C4=sang;
+  51   2                      C3=sang;delay_ms(350);
+  52   2                      C6=sang;C3=tat;delay_ms(350);
+  53   2                      C7=sang;C6=tat;delay_ms(350);
+  54   2                      C8=sang;C7=tat;delay_ms(350);
+C51 COMPILER V9.01   MAIN                                                                  07/17/2018 10:58:41 PAGE 2   
+
+  55   2                      C5=sang;C8=tat;delay_ms(350);
+  56   2                      C2=sang;C5=tat;delay_ms(350);
+  57   2                      C1=sang;C2=tat;delay_ms(350);
+  58   2                      C0=sang;C1=tat;delay_ms(350);
+  59   2              /*----------------------------*/
+  60   2                      P0=P2=0xFF;delay_ms(350);
+  61   2                      C4=sang;
+  62   2                      C0=sang;delay_ms(350);
+  63   2                      C1=sang;C0=tat;delay_ms(350);
+  64   2                      C2=sang;C1=tat;delay_ms(350);
+  65   2                      C5=sang;C2=tat;delay_ms(350);
+  66   2                      C8=sang;C5=tat;delay_ms(350);
+  67   2                      C7=sang;C8=tat;delay_ms(350);
+  68   2                      C6=sang;C7=tat;delay_ms(350);
+  69   2                      C3=sang;C6=tat;delay_ms(350);                   
+  70   2              }
+  71   1              return 0;       
+  72   1      }
+  73          int kdh(unsigned char lan){
+  74   1              unsigned char i;
+  75   1              for(i=0;i<lan;i++){
+  76   2                      P1=0x00;
+  77   2                      P0=P2=0xFF;delay_ms(350);
+  78   2                      C4=sang;delay_ms(350);
+  79   2                      C3=sang;delay_ms(350);
+  80   2                      C6=sang;delay_ms(350);
+  81   2                      C7=sang;delay_ms(350);
+  82   2                      C8=sang;delay_ms(350);
+  83   2                      C5=sang;delay_ms(350);
+  84   2                      C2=sang;delay_ms(350);
+  85   2                      C1=sang;delay_ms(350);
+  86   2                      C0=sang;delay_ms(350);
+  87   2              /*----------------------------*/
+  88   2                      P0=P2=0xFF;delay_ms(350);
+  89   2                      C0=sang;delay_ms(350);
+  90   2                      C1=sang;delay_ms(350);
+  91   2                      C2=sang;delay_ms(350);
+  92   2                      C5=sang;delay_ms(350);
+  93   2                      C8=sang;delay_ms(350);
+  94   2                      C7=sang;delay_ms(350);
+  95   2                      C6=sang;delay_ms(350);
+  96   2                      C3=sang;delay_ms(350);
+  97   2                      C4=sang;delay_ms(350);                  
+  98   2              }
+  99   1              return 0;
+ 100   1      }
+ 101          int sangtungcot1(unsigned char lan){
+ 102   1              unsigned char i;
+ 103   1              for(i=0;i<lan;i++){
+ 104   2                      P1=0x00;
+ 105   2                      P0=P2=0xFF;
+ 106   2                      C0=sang;delay_ms(900);
+ 107   2                      C1=sang;delay_ms(800);
+ 108   2                      C2=sang;delay_ms(700);
+ 109   2                      C5=sang;delay_ms(600);
+ 110   2                      C8=sang;delay_ms(500);
+ 111   2                      C7=sang;delay_ms(400);
+ 112   2                      C6=sang;delay_ms(300);
+ 113   2                      C3=sang;delay_ms(200);
+ 114   2                      C4=sang;delay_ms(900);
+ 115   2              }
+ 116   1              return 0;
+C51 COMPILER V9.01   MAIN                                                                  07/17/2018 10:58:41 PAGE 3   
+
+ 117   1      }
+ 118          int sangtungcot(unsigned char lan){
+ 119   1              unsigned char i;
+ 120   1              for(i=0;i<lan;i++){
+ 121   2                      P1=0x00;
+ 122   2                      P0=P2=0xFF;
+ 123   2                      C0=sang;delay_ms(350);
+ 124   2                      C1=sang;delay_ms(350);
+ 125   2                      C2=sang;delay_ms(350);
+ 126   2                      C3=sang;delay_ms(350);
+ 127   2                      C4=sang;delay_ms(350);
+ 128   2                      C5=sang;delay_ms(350);
+ 129   2                      C6=sang;delay_ms(350);
+ 130   2                      C7=sang;delay_ms(350);
+ 131   2                      C8=sang;delay_ms(350);
+ 132   2              }
+ 133   1      }
+ 134          int init(){
+ 135   1              P0=P2=P1=0xFF;
+ 136   1      }
+ 137          int sangduoilen(unsigned char lan){
+ 138   1              unsigned char i;
+ 139   1              for(i=0;i<lan;i++){
+ 140   2                      P0=P2=0x00;
+ 141   2                      P1=0xFF;
+ 142   2                      H0 = sang;
+ 143   2                      delay_ms(350);
+ 144   2                      H1 = sang;
+ 145   2                      delay_ms(350);
+ 146   2                      H2 = sang;
+ 147   2                      delay_ms(350);
+ 148   2              }       
+ 149   1      }
+ 150          int sangtrenxuong(unsigned char lan){
+ 151   1              unsigned char i;
+ 152   1              for(i=0;i<lan;i++){
+ 153   2                      P0=P2=0x00;
+ 154   2                      P1=0xFF;
+ 155   2                      H2 = sang;
+ 156   2                      delay_ms(350);
+ 157   2                      H1 = sang;
+ 158   2                      delay_ms(350);
+ 159   2                      H0 = sang;
+ 160   2                      delay_ms(350);
+ 161   2              }       
+ 162   1      }
+ 163          int blink(unsigned char lan){
+ 164   1              unsigned char i;
+ 165   1              P0=P2=0x00;
+ 166   1              for(i=0;i<lan;i++){
+ 167   2                      P1=0x00;
+ 168   2                      delay_ms(20);
+ 169   2                      P1=0xFF;
+ 170   2                      delay_ms(20);
+ 171   2              }
+ 172   1              return 0;
+ 173   1      }
+*** WARNING C290 IN LINE 44 OF SRC\MAIN.C: missing return value
+*** WARNING C290 IN LINE 133 OF SRC\MAIN.C: missing return value
+*** WARNING C290 IN LINE 136 OF SRC\MAIN.C: missing return value
+*** WARNING C290 IN LINE 149 OF SRC\MAIN.C: missing return value
+*** WARNING C290 IN LINE 162 OF SRC\MAIN.C: missing return value
+C51 COMPILER V9.01   MAIN                                                                  07/17/2018 10:58:41 PAGE 4   
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1050    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      16
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  5 WARNING(S),  0 ERROR(S)
